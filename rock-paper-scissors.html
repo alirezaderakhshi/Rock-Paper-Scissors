@@ -1,0 +1,53 @@
+
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" />
+		<script src="script.js"></script>
+	</head>
+	<body>
+	<form>
+
+	  <input disabled type="radio" id="rock"   onclick="play('rock')">
+	  <input disabled type="radio" id="paper"  onclick="play('paper')">
+	  <input disabled type="radio" id="scissors"  onclick="play('scissors')">
+
+	  <div>
+		<h1>CSS Rock-Paper-Scissors</h1>
+		<div id="hands">		
+		  <div class="hand" id="computer_hand">
+			<img id="computer_img" src="rock.png" width="170px" height="250px">
+		  </div>
+		
+		  <div class="hand" id="user_hand">
+			<img id="user_img" src="rock.png" width="170px" height="250px">
+		  </div>
+		  
+		  <div id="icons">
+			<div>
+			  <label  for="rock">✊</label>
+			</div>
+			<div>
+			  <label for="paper">🖐️</label>
+			</div>
+			<div>
+			  <label  for="scissors">✌</label>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div>
+		<h2 id="message"></h2>
+		<h2 id="scores"></h2>
+	  </div>
+
+	  <div>
+		<button id="start_button" type="button" onclick="start()"> New Game </button>
+		<br/>
+		<br/>
+		<input type="reset" id="reset_button" value="Play Again" onclick="reload()" />
+	  </div>
+
+	</form>
+	</body>
+</html>

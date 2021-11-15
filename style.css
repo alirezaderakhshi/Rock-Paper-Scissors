@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+
+
+		html, body {
+		  margin: 0;
+		  padding: 0;
+		  border: 0;
+		  line-height: 1;
+		  font-family: Acme, Arial, sans-serif;
+		}
+
+		form {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  flex-direction: column;
+		}
+
+		h1,h2 {
+		  text-align: center;
+		}
+
+        #start_button {
+            align-items: center;
+            justify-content: center;
+            background-color: #008CBA; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #reset_button{
+            background-color: #f44336; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            visibility: hidden;
+        }
+
+		#hands {
+		  text-align: center;
+		}
+
+		input:checked ~ div .hand {
+		  animation: none !important;
+		}
+
+		.hand {
+		  margin: 20px;
+		  width: 200px;
+		  height: 250px;
+		  position: relative;		  
+		  display: inline-block;
+		}
+
+		.hand > div {
+		  position: absolute;
+		  box-sizing: border-box;
+		}
+
+		input[type="radio"] {
+		  position: absolute;
+		  top: -1000in;
+		  left: -1000in;
+		}
+ 
+		#message {
+		  text-align: center;
+		  display: block;
+		}
+
+		input:checked ~ #message {
+		  display: block;
+		}
+
+		#hands {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+
+		#icons {
+		  width: 30px;
+		  height: 200px;
+		  display: inline-flex;
+		  flex-direction: column;
+		  visibility: hidden
+		}
+
+		#icons > div {
+		  flex: 1;
+		  align-items: center;
+		  justify-content: center;
+		  width: 60px;
+		  height: 60px;
+		  overflow: hidden;
+		  position: relative;
+		}
+
+
+		label:active {
+		  position:static; 
+		  margin-left: 60px;
+		}
+
+		label:active::before {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 60px;
+		  z-index: 10;
+		  height: 60px;
+		}
+
+
+		label {
+		  animation: changeOrder 0.45s infinite linear;
+		  background: #f5f5f5;
+		  border: 1px solid #ccc;
+		  box-sizing: border-box;
+		  cursor: pointer;
+		  display: block;
+		  height: 60px;
+		  width: 60px;
+		  line-height: 60px;
+		  font-size: 2rem;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  user-select: none;
+		}
+
+		label:nth-of-type(1) { animation-delay: -0.00s; }
+		label:nth-of-type(2) { animation-delay: -0.15s; }
+		label:nth-of-type(3) { animation-delay: -0.30s; }
